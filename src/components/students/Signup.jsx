@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Userservice from "../../service/Userservice"
+import Userservice from "../../service/UserService"
 
 export default function Signup() {
   const [name, setName] = useState("");
