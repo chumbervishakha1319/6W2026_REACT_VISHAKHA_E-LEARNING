@@ -1,18 +1,28 @@
 import Studentfooter from "./Studentfooter";
 import Studentheader from "./studentheader";
-import { Outlet } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 
-import About from "../../about/About";
+export default function StudentLayout() {
 
-export default function StudentLayout(){
-    return(
+  const user = JSON.parse(
+    localStorage.getItem("user")
+  );
 
-        <>
-       <Studentheader></Studentheader>
-       <Outlet></Outlet>
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
 
-       <Studentfooter></Studentfooter>
-        
-        </>
-    )
+  if (
+    String(user.userType).toLowerCase() !== "student"
+  ) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return (
+    <>
+      <Studentheader />
+      <Outlet />
+      <Studentfooter />
+    </>
+  );
 }

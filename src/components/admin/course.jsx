@@ -124,7 +124,19 @@ export default function Course() {
       }
     }
   };
+// ================= APPROVE / REJECT =================
+const updateStatus = async (id, status) => {
+  try {
+    await CourseService.updateCourseStatus(id, status);
 
+    alert(`Course ${status} Successfully`);
+
+    getCourses();
+
+  } catch (error) {
+    alert(error.message);
+  }
+};
   return (
     <div className="container mt-5">
       <div className="card shadow p-4">
@@ -255,56 +267,80 @@ export default function Course() {
           </thead>
 
           <tbody>
-            {courses.length > 0 ? (
-              courses.map((item, index) => (
-                <tr key={item.id}>
-                  <td>{index + 1}</td>
+  {courses.length > 0 ? (
+    courses.map((item, index) => (
+      <tr key={item.id}>
+        <td>{index + 1}</td>
 
-                  <td>
-                    {categories.find(
-                      (cat) => cat.id === item.categoryId
-                    )?.name}
-                  </td>
+        <td>
+          {categories.find(
+            (cat) => cat.id === item.categoryId
+          )?.name}
+        </td>
 
-                  <td>{item.title}</td>
+        <td>{item.title}</td>
 
-                  <td>₹ {item.price}</td>
+        <td>₹ {item.price}</td>
 
-                  <td>{item.duration}</td>
+        <td>{item.duration}</td>
 
-                  <td>{item.level}</td>
+        <td>{item.level}</td>
 
-                  <td>{item.status}</td>
+        <td>{item.status}</td>
 
-                  <td>{item.approvalStatus}</td>
+        <td>
+          <b>{item.approvalStatus}</b>
 
-                  <td>
-                    <button
-                      className="btn btn-warning btn-sm"
-                      onClick={() => editCourse(item)}
-                    >
-                      Edit
-                    </button>
-                  </td>
+          <br />
 
-                  <td>
-                    <button
-                      className="btn btn-danger btn-sm"
-                      onClick={() => deleteCourse(item.id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="10" className="text-center">
-                  No Courses Found
-                </td>
-              </tr>
-            )}
-          </tbody>
+          <button
+            className="btn btn-success btn-sm mt-2 me-2"
+            onClick={() =>
+              updateStatus(item.id, "Approved")
+            }
+          >
+            Approve
+          </button>
+
+          <button
+            className="btn btn-danger btn-sm mt-2"
+            onClick={() =>
+              updateStatus(item.id, "Rejected")
+            }
+          >
+            Reject
+          </button>
+
+        </td>
+
+        <td>
+          <button
+            className="btn btn-warning btn-sm"
+            onClick={() => editCourse(item)}
+          >
+            Edit
+          </button>
+        </td>
+
+        <td>
+          <button
+            className="btn btn-danger btn-sm"
+            onClick={() => deleteCourse(item.id)}
+          >
+            Delete
+          </button>
+        </td>
+
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="10" className="text-center">
+        No Courses Found
+      </td>
+    </tr>
+  )}
+</tbody>
         </table>
 
       </div>

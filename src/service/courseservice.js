@@ -3,6 +3,7 @@ import {
   collection,
   addDoc,
   getDocs,
+  getDoc,
   doc,
   updateDoc,
   deleteDoc,
@@ -20,6 +21,11 @@ class CourseService {
     return await getDocs(courseCollection);
   };
 
+  getCourseById = async (id) => {
+    const courseDoc = doc(db, "courses", id);
+    return await getDoc(courseDoc);
+  };
+
   updateCourse = async (id, updatedCourse) => {
     const courseDoc = doc(db, "courses", id);
     return await updateDoc(courseDoc, updatedCourse);
@@ -28,6 +34,15 @@ class CourseService {
   deleteCourse = async (id) => {
     const courseDoc = doc(db, "courses", id);
     return await deleteDoc(courseDoc);
+  };
+
+  // ✅ Approve / Reject Course
+  updateCourseStatus = async (id, status) => {
+    const courseDoc = doc(db, "courses", id);
+    return await updateDoc(courseDoc, {
+      approvalStatus: status,
+      updatedAt: Date.now(),
+    });
   };
 
 }

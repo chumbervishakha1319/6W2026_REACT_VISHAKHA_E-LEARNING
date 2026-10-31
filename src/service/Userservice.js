@@ -1,4 +1,5 @@
 import { db } from "../firebase/firebase";
+
 import {
   collection,
   addDoc,
@@ -12,28 +13,50 @@ const userCollection = collection(db, "users");
 
 class UserService {
 
-  // Create
+  // Create User
   addUser = async (newUser) => {
-    return await addDoc(userCollection, newUser);
+    return await addDoc(
+      userCollection,
+      newUser
+    );
   };
 
-  // Read
+  // Get All Users
   getAllUsers = async () => {
-    return await getDocs(userCollection);
+    return await getDocs(
+      userCollection
+    );
   };
 
-  // Update
-  updateUser = async (id, updatedUser) => {
-    const userDoc = doc(db, "users", id);
-    return await updateDoc(userDoc, updatedUser);
+  // Update User
+  updateUser = async (
+    id,
+    updatedUser
+  ) => {
+    const userDoc = doc(
+      db,
+      "users",
+      id
+    );
+
+    return await updateDoc(
+      userDoc,
+      updatedUser
+    );
   };
 
-  // Delete
+  // Delete User
   deleteUser = async (id) => {
-    const userDoc = doc(db, "users", id);
-    return await deleteDoc(userDoc);
-  };
+    const userDoc = doc(
+      db,
+      "users",
+      id
+    );
 
+    return await deleteDoc(
+      userDoc
+    );
+  };
 }
 
 export default new UserService();
