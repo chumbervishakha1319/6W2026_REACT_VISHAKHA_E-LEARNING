@@ -9,6 +9,10 @@
     "lint": "oxlint",
     "preview": "vite preview"
   },
+  "allowScripts": {
+    "@firebase/util": true,
+    "protobufjs": true
+  },
   "dependencies": {
     "firebase": "^12.16.0",
     "react": "^19.2.7",

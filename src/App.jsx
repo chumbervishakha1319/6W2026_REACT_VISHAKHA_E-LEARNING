@@ -9,14 +9,14 @@ import {
 // ================= STUDENT PAGES =================
 import Home from "./components/home/Home";
 import About from "./components/about/About";
-import StudentCourse from "./components/students/course";
+import StudentCourse from "./components/students/Course";
 import Coursedetail from "./components/course/Coursedetail";
 import Instructor from "./components/students/Instructor";
 import Instructordetail from "./components/students/Instructordetail";
 import Pricingplan from "./components/students/Pricingplan";
 import Contact from "./components/contact/Contact";
-import Signup from "./components/students/signup";
-import Login from "./components/students/login";
+import Signup from "./components/students/Signup";
+import Login from "./components/students/Login";
 import MyCourses from "./components/students/MyCourses";
 import MyGrades from "./components/students/MyGrades";
 import StudentDashboard from "./components/students/Dashboard";
@@ -24,33 +24,33 @@ import Announcements from "./components/students/Announcement";
 
 // ================= LAYOUTS =================
 import StudentLayout from "./components/students/layout/StudentLayout";
-import AdminLayout from "./components/admin/layout/adminlayout";
-import InstructorLayout from "./components/pages/instructor/layout/instructorlayout";
+import AdminLayout from "./components/admin/layout/Adminlayout";
+import InstructorLayout from "./components/pages/instructor/layout/Instructorlayout";
 
 // ================= ADMIN PAGES =================
-import Dashboard from "./components/admin/dashboard";
-import Category from "./components/admin/category";
-import AdminCourse from "./components/admin/course";
+import Dashboard from "./components/admin/Dashboard";
+import Category from "./components/admin/Category";
+import AdminCourse from "./components/admin/Course";
 import User from "./components/admin/User";
 import InstructorAdmin from "./components/admin/Instructor";
 import Student from "./components/admin/Student";
 import Lesson from "./components/admin/Lesson";
 import Enrollment from "./components/admin/Enrollment";
-import Certificate from "./components/admin/certificate";
-import Report from "./components/admin/report";
+import Certificate from "./components/admin/Certificate";
+import Report from "./components/admin/Report";
 
 // ================= INSTRUCTOR PAGES =================
-import InstructorDashboard from "./components/pages/instructor/dashboard";
-import Profile from "./components/pages/instructor/profile";
-import CreateCourses from "./components/pages/instructor/createcourses";
-import MyCoursesInstructor from "./components/pages/instructor/mycourses";
-import UploadVideo from "./components/pages/instructor/uploadvideo";
-import UploadNotes from "./components/pages/instructor/uploadnotes";
-import Assignment from "./components/pages/instructor/assignment";
-import AssignmentSubmission from "./components/pages/instructor/assignmentsubmission";
-import GradeAssigment from "./components/pages/instructor/gradeassigment";
-import StudentProgress from "./components/pages/instructor/studentprogress";
-import Announcement from "./components/pages/instructor/announcement";
+import InstructorDashboard from "./components/pages/instructor/Dashboard";
+import Profile from "./components/pages/instructor/Profile";
+import CreateCourses from "./components/pages/instructor/Createcourses";
+import MyCoursesInstructor from "./components/pages/instructor/Mycourses";
+import UploadVideo from "./components/pages/instructor/Uploadvideo";
+import UploadNotes from "./components/pages/instructor/Uploadnotes";
+import Assignment from "./components/pages/instructor/Assignment";
+import AssignmentSubmission from "./components/pages/instructor/Assignmentsubmission";
+import GradeAssigment from "./components/pages/instructor/Gradeassigment";
+import StudentProgress from "./components/pages/instructor/Studentprogress";
+import Announcement from "./components/pages/instructor/Announcement";
 
 
 // ======================================================
