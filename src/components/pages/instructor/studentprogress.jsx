@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import EnrollmentService from "../../../service/EnrollmentService";
 import CourseService from "../../../service/CourseService";
 import AssignmentSubmissionService from "../../../service/assignmentsubmissionsevice";
-import UserService from "../../../service/Userservice";
+import UserService from "../../../service/UserService";
 
 export default function StudentProgress() {
 

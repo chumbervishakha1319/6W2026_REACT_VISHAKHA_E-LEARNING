@@ -1,5 +1,5 @@
 import Studentfooter from "./Studentfooter";
-import Studentheader from "./studentheader";
+import Studentheader from "./Studentheader";
 import { Outlet, Navigate } from "react-router-dom";
 
 export default function StudentLayout() {
