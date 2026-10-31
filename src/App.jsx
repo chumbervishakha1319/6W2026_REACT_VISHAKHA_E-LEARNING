@@ -31,10 +31,10 @@ import InstructorLayout from "./components/pages/instructor/layout/instructorlay
 import Dashboard from "./components/admin/dashboard";
 import Category from "./components/admin/category";
 import AdminCourse from "./components/admin/course";
-import User from "./components/admin/user";
-import InstructorAdmin from "./components/admin/instructor";
-import Student from "./components/admin/student";
-import Lesson from "./components/admin/lesson";
+import User from "./components/admin/User";
+import InstructorAdmin from "./components/admin/Instructor";
+import Student from "./components/admin/Student";
+import Lesson from "./components/admin/Lesson";
 import Enrollment from "./components/admin/Enrollment";
 import Certificate from "./components/admin/certificate";
 import Report from "./components/admin/report";
